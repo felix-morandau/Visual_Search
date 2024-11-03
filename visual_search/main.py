@@ -1,6 +1,7 @@
 import pygame
 import a_star
-import unc
+import dijkstra
+import ucs
 import bfs
 import dfs
 
@@ -210,7 +211,7 @@ while True:
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_SPACE and not start:
                 board.update_neighbours()
-                path = a_star.a_star(board)
+                path = dijkstra.dijkstra(board)
 
                 for spot in path:
                     spot.make_path()

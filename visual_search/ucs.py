@@ -1,7 +1,7 @@
 from queue import PriorityQueue
 
 
-def unc(problem):
+def ucs(problem):
     start_node = problem.get_start_spot()
 
     frontier = PriorityQueue()
